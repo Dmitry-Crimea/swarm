@@ -1,0 +1,1 @@
+---- name: Install NFS Server on 'storage'  apt:    update_cache: true    name: nfs-kernel-server    state: present

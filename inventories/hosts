@@ -1,0 +1,1 @@
+[master]ctl1 ansible_host=10.6.0.71 ansible_user=root[worker]wrk1 ansible_host=10.6.0.72 ansible_user=rootwrk2 ansible_host=10.6.0.73 ansible_user=rootwrk3 ansible_host=10.6.0.74 ansible_user=root[storage]nfs1 ansible_host=10.6.0.75 ansible_user=root[swarm:children]masterworker[all:vars]ansible_python_interpreter=/usr/bin/python3

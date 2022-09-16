@@ -1,0 +1,1 @@
+---- name: Install Docker Community Edition  apt:    update_cache: true    name: docker-ce    state: present

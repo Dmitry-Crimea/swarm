@@ -1,0 +1,1 @@
+---- name: 'INSTALL | install nfs server'  include_tasks: install.yml  when: inventory_hostname in groups['storage']  tags: 'nfs'
