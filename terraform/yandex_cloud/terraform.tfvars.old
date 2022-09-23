@@ -1,0 +1,4 @@
+zone                     = "ru-central1-b"
+service_account_key_file = "/home/it/key.json"
+cloud_id                 = "/user-data/cloud_id"
+folder_id                = "/user-data/cloud_id"

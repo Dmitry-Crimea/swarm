@@ -1,0 +1,7 @@
+---
+
+swarm:
+  - name: swarm
+    join_token: "docker swarm join --token {{ join_raw_token.stdout_lines[0] }}{{ manager_ip }}:2377"
+    repo: "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable"
+    key: "https://download.docker.com/linux/ubuntu/gpg"
