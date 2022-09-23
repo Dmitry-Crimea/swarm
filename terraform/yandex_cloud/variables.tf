@@ -30,9 +30,9 @@ variable "folder_id" {
   default     = "b1gvvrumuappv2nqht7i"
 }
 
-#ID сетевого интерфейса
+#ID сетевого интерфейса для NFS
 variable "network_interface" {
-  description = "subnet_id"
+  description = "subnet_ids"
   default     = "e2lgnked6q12v5dompd0"
 }
 
