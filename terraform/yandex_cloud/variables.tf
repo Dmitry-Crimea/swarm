@@ -1,5 +1,4 @@
 # Файл с пользовательскими данными. В частности в этом файле указаны имя пользователя
-# и SSH ключ, для доступа на наши VPC по SSH, а так же создаем пользователя.
 variable "user_account" {
   description = "user account"
   default = "./user-data/user_account"
@@ -18,12 +17,6 @@ variable "zone" {
   default     = "ru-central1-b"
 }
 
-#ID образа нашей виртуальной машины
-variable "image_id" {
-  description = "Image ID"
-  default     = "fd8lbi4hr72am1eb2kmf"
-
-}
 
 #ID самого облака Яндекс, в котором будем работать
 variable "cloud_id" {
