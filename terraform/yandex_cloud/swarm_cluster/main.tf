@@ -47,7 +47,7 @@ resource "yandex_compute_instance" "nfs" {
   boot_disk {
     mode = "READ_WRITE"                      # Режим работы диска
     initialize_params {
-      image_id = "${data.yandex_compute_image.ubuntu_image.id}"
+      image_id = "${data.yandex_compute_image.ubuntu_image.id}" #Образ, из которого произведется установка ОС
       size     = 20                          # Размер диска для нашего инстанса
     }
   }
