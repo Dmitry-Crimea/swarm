@@ -3,7 +3,7 @@ resource "yandex_compute_instance_group" "swarm" {
   name                    = "swarm"      # Имя нашей виртуалки
   folder_id               = "${data.yandex_resourcemanager_folder.default.id}"
   service_account_id      = "${data.yandex_iam_service_account.yandex.id}"
-  deletion_protection     = true
+  deletion_protection     = false
   instance_template {
     platform_id           = "standard-v1"   # на какой серверной платформе будет создан наш инстанс
     resources {
@@ -21,6 +21,7 @@ resource "yandex_compute_instance_group" "swarm" {
     network_interface {
       network_id = "${data.yandex_vpc_network.swarm.id}" #ID Сети
       subnet_ids = ["${data.yandex_vpc_subnet.swarm.id}"] #D подсетей, к которым нужно подключить этот интерфейс
+      nat = true
     }
 
     metadata = {
@@ -47,7 +48,7 @@ resource "yandex_compute_instance_group" "swarm" {
 
 #Создаём VPC для нашего NFS
 resource "yandex_compute_instance" "nfs" {
-  name        = "NFS-storage"      # Имя нашей виртуалки
+  name        = "nfs storage"      # Имя нашей виртуалки
   platform_id = "standard-v1"   # на какой серверной платформе будет создан наш инстанс
   zone        = "ru-central1-b" # Зона доступности
 

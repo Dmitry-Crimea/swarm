@@ -1,0 +1,23 @@
+{
+  "version": 4,
+  "terraform_version": "1.2.9",
+  "serial": 18,
+  "lineage": "d8495a06-e05f-ae50-4660-a0aea7d8d2c1",
+  "outputs": {},
+  "resources": [
+    {
+      "mode": "managed",
+      "type": "yandex_vpc_subnet",
+      "name": "subnet-1",
+      "provider": "provider[\"registry.terraform.io/yandex-cloud/yandex\"]",
+      "instances": []
+    },
+    {
+      "mode": "managed",
+      "type": "yandex_vpc_subnet",
+      "name": "subnet-2",
+      "provider": "provider[\"registry.terraform.io/yandex-cloud/yandex\"]",
+      "instances": []
+    }
+  ]
+}
